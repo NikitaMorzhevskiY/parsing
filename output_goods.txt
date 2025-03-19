@@ -1,0 +1,47 @@
+<entry>
+	<bean class="dataCompositeCarver">
+		<constructor-arg>
+			<list>
+				<entry><bean class="dataSimpleCarver"><constructor-arg value="name"/></bean></entry>
+				<entry><bean class="dataSimpleCarver"><constructor-arg value="note0"/></bean></entry>
+				<entry><bean class="HomeToolsBatteryCarver"/></entry>
+    			<entry><bean class="HomeToolsDiscCarver"/></entry>
+    			<entry><bean class="HomeToolsEngineCarver"/></entry>
+    			<entry><bean class="HomeToolsSawCarver"/></entry>
+    			<entry><bean class="HomeToolsPowerCarver"/></entry>
+				<entry><bean class="FurnitureKitchenSetsTypeCarver"/></entry>
+    			<entry><bean class="FurnitureKitchenSetsFeatureCarver"/></entry>
+    			<entry><bean class="FurnitureKitchenSetsMaterialCarver"/></entry>
+			</list>
+		</constructor-arg>
+	</bean>
+</entry>
+<entry><bean class="dataSimpleCarver"><constructor-arg value="std.art"/></bean></entry>
+<entry><bean class="PriceCarver"/></entry>
+<entry>
+    <bean class="DataClassifyingRegexpCarver">
+        <constructor-arg value="sell.onDemand"/>
+        <constructor-arg>
+            <list>
+                <entry key="1" value="@(?i)заказ@"/>
+            </list>
+        </constructor-arg>
+    </bean>
+</entry>
+<entry><bean class="QuantityCarver"/></entry>
+<entry>
+	<bean class="dataCompositeCarver">
+		<constructor-arg>
+			<list>
+				<entry><bean class="dataSimpleCarver"><constructor-arg value="note1"/></bean></entry>
+			<entry><bean class="HomeToolsDiscCarver"/></entry>
+    			<entry><bean class="HomeToolsEngineCarver"/></entry>
+    			<entry><bean class="HomeToolsSawCarver"/></entry>
+    			<entry><bean class="HomeToolsPowerCarver"/></entry>
+				<entry><bean class="FurnitureKitchenSetsTypeCarver"/></entry>
+    			<entry><bean class="FurnitureKitchenSetsFeatureCarver"/></entry>
+    			<entry><bean class="FurnitureKitchenSetsMaterialCarver"/></entry>
+			</list>
+		</constructor-arg>
+	</bean>
+</entry>

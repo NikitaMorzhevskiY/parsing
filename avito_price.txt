@@ -1,0 +1,272 @@
+                                <entry><bean class="dataSimpleCarver"><constructor-arg value="std.art"/></bean></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+                                <entry>
+                                    <bean class="dataCompositeCarver">
+                                        <constructor-arg>
+                                            <list>
+                                                <!--<entry>
+                                                    <bean class="dataRegexpCarver">
+                                                        <constructor-arg>
+                                                            <list>
+                                                                <entry value="all"/>
+                                                                <entry value="post"/>
+                                                                <entry value="name"/>
+                                                            </list>
+                                                        </constructor-arg>
+                                                        <constructor-arg value="@(?i)(.*?)\(?([a-z]*[а-яё]{3,}.*)@"/>
+                                                    </bean>
+                                                </entry>-->
+                                                <entry><bean class="dataSimpleCarver"><constructor-arg value="name"/></bean></entry>
+                                                <entry><bean class="dataSimpleCarver"><constructor-arg value="note0"/></bean></entry>
+                                                <entry><bean class="AutoDiscTireMixedCarver"/></entry>
+                                                <entry><bean class="AutoTyreSeasonCarver"/></entry>
+                                                <entry><bean class="AutoTyreSpikeCarver"/></entry>
+                                                <entry><bean class="AutoDiscTypeCarver"/></entry>
+                                                <entry><bean class="OilTypeDataCarver"/></entry>
+                                                <entry><bean class="MotorOilApiCarver"/></entry>
+                                                <entry><bean class="MotorOilAceaCarver"/></entry>
+                                                <entry><bean class="OilVolumeDataCarver"/></entry>
+                                                <entry><bean class="MotorOilFuelCarver"/></entry>
+                                                <entry><bean class="MotorOilEngineCarver"/></entry>
+                                                <entry><bean class="OilTransportDataCarver"/></entry>
+                                                <entry><bean class="OilViscosityDataCarver"/></entry>
+                                                <entry><bean class="GearOilFunctionCarver"/></entry>
+                                                <entry><bean class="GearOilApiCarver"/></entry>
+                                                <entry><bean class="OtherOilFunctionCarver"/></entry>
+                                                <entry><bean class="OilViscosityIsoDataCarver"/></entry>
+                                                <entry><bean class="BatteryTypeCarver"/></entry>
+                                                <entry><bean class="BatteryCapacityCarver"/></entry>
+                                                <entry><bean class="BatteryFixingCarver"/></entry>
+                                                <entry><bean class="TypeBodyCarver"/></entry>
+                                                <entry><bean class="StartingCurrentCarver"/></entry>
+                                                <entry><bean class="SpeakerSystemTypeCarver"/></entry>
+                                                <entry><bean class="SpeakerTypeCarver"/></entry>
+                                                <entry><bean class="SpeakerSubwooferTypeCarver"/></entry>
+                                                <entry><bean class="SpeakerSubwooferBodyCarver"/></entry>
+                                                <entry><bean class="AmplifierChannelsCarver"/></entry>
+                                                <entry><bean class="AudioRadioDimCarver"/></entry>    
+                                                <entry><bean class="AutoPartsPositionCarver"/></entry>    
+                                                <!--<entry><bean class="BikeFrameSizeCarver"/></entry>
+                                                <entry><bean class="BikeTypeCarver"/></entry>
+                                                <entry><bean class="BikeFrameCarver"/></entry>
+                                                <entry><bean class="BikeWheelsCarver"/></entry>-->
+                                            </list>
+                                        </constructor-arg>
+                                    </bean>
+                                </entry>
+                                <entry><bean class="DataRawCarver"><constructor-arg value="note1"/><constructor-arg value="true"/></bean></entry>
+                                <entry>
+                                    <bean class="dataCompositeCarver">
+                                        <constructor-arg>
+                                            <list>
+                                                <entry>
+                                                    <bean class="DataClassifyingRegexpCarver">
+                                                        <constructor-arg value="sell.condition"/>
+                                                        <constructor-arg>
+                                                            <list>
+                                                                <entry key="used" value="@(?i)\bб[\.\/\]?у\b|подержан|контр@"/>
+                                                                <entry key="new" value="@(?i)нов@"/>
+                                                            </list>
+                                                        </constructor-arg>
+                                                    </bean>
+                                                </entry>
+                                                <entry>
+                                                    <bean class="DataClassifyingRegexpCarver">
+                                                        <constructor-arg value="autoParts.authenticity"/>
+                                                        <constructor-arg>
+                                                            <list>
+                                                                <entry key="original" value="@(?i)контр@"/>
+                                                            </list>
+                                                        </constructor-arg>
+                                                    </bean>
+                                                </entry>
+                                                <entry><bean class="dataSimpleCarver"><constructor-arg value="condition"/></bean></entry>
+                                            </list>
+                                        </constructor-arg>
+                                    </bean>
+                                </entry>
+                                <entry><bean class="PriceCarver"/></entry>
+                                <entry>
+                                    <bean class="dataStrReplaceFormatCarver">
+                                        <constructor-arg>
+                                            <bean class="DataSplittedUrisCarver">
+                                                <constructor-arg>
+                                                    <list>
+                                                        <entry value="image1"/>
+                                                        <entry value="image2"/>
+                                                        <entry value="image3"/>
+                                                        <entry value="image4"/>
+                                                        <entry value="image5"/>
+                                                        <entry value="image6"/>
+                                                        <entry value="image7"/>
+                                                        <entry value="image8"/>
+                                                        <entry value="image9"/>
+                                                        <entry value="image10"/>
+                                                        <entry value="image11"/>
+                                                        <entry value="image12"/>
+                                                        <entry value="image13"/>
+                                                        <entry value="image14"/>
+                                                        <entry value="image15"/>
+                                                        <entry value="image16"/>
+                                                        <entry value="image17"/>
+                                                        <entry value="image18"/>
+                                                        <entry value="image19"/>
+                                                        <entry value="image20"/>
+                                                    </list>
+                                                </constructor-arg>
+                                                <constructor-arg value="@[\s\,\;]+@"/>
+                                            </bean>
+                                        </constructor-arg>
+                                        <constructor-arg value="http://avito.ru/autoload/1/items-to-feed/images?imageSlug="/>
+                                        <constructor-arg value="https://50.img.avito.st"/>
+                                    </bean>												
+                                </entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+                                <entry>
+                                    <bean class="DataClassifyingRegexpCarver">
+                                        <constructor-arg value="sell.onDemand"/>
+                                        <constructor-arg>
+                                            <list>
+                                                <entry key="1" value="@(?i)заказ@"/>
+                                            </list>
+                                        </constructor-arg>
+                                    </bean>
+                                </entry>
+								<entry><bean class="dataNullCarver"/></entry>
+                                <entry>
+                                    <bean class="dataCompositeCarver">
+                                        <constructor-arg>
+                                            <list>
+                                                <entry><bean class="dataSimpleCarver"><constructor-arg value="maker"/></bean></entry>
+                                                <entry><bean class="dataSimpleCarver"><constructor-arg value="autoParts.manufacturer.text"/></bean></entry>
+                                            </list>
+                                        </constructor-arg>
+                                    </bean>
+                                </entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+<!-- LoadIndex -->			    <entry><bean class="dataSimpleCarver"><constructor-arg value="in"/></bean></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+                                <entry>
+                                    <bean class="dataCompositeCarver">
+                                        <constructor-arg>
+                                            <list>
+                                                <entry><bean class="dataSimpleCarver"><constructor-arg value="model1"/></bean></entry>
+                                                <entry><bean class="dataSimpleNameCarver"><constructor-arg value="auto.model"/></bean></entry>
+                                            </list>
+                                        </constructor-arg>
+                                    </bean>
+                                </entry>
+                                <entry>
+                                    <bean class="dataCompositeCarver">
+                                        <constructor-arg>
+                                            <list>
+                                                <entry><bean class="dataSimpleCarver"><constructor-arg value="number"/></bean></entry>
+                                                <entry>
+                                                    <bean class="dataPregReplaceFormatCarver">
+                                                        <constructor-arg>
+                                                            <bean class="dataPregReplaceFormatCarver">
+                                                                <constructor-arg>
+                                                                    <bean class="dataSimpleCarver"><constructor-arg value="autoParts.partNumberOem"/></bean>
+                                                                </constructor-arg>
+                                                                <constructor-arg value="@[\/\;\+]@"/>
+                                                                <constructor-arg value=","/>
+                                                            </bean>
+                                                        </constructor-arg>
+                                                        <constructor-arg value="@[\s\.\-]@"/>
+                                                        <constructor-arg value=""/>
+                                                    </bean>
+                                                </entry>
+                                            </list>
+                                        </constructor-arg>
+                                    </bean>
+                                </entry>
+								<entry><bean class="dataNullCarver"/></entry>
+                                <entry>
+                                    <bean class="DataClassifyingRegexpCarver">
+                                        <constructor-arg value="autoParts.authenticity"/>
+                                        <constructor-arg>
+                                            <list>
+                                                <entry key="original" value="@(?i)контр|оригинал@"/>
+                                                <entry key="analog" value="@(?i)аналог@"/>													
+                                            </list>
+                                        </constructor-arg>
+                                    </bean>
+                                </entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+                                <entry><bean class="QuantityCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+<!--RimBolts-->    			    <entry><bean class="dataSimpleCarver"><constructor-arg value="spcd"/></bean></entry>
+<!--RimBoltsDiameter-->         <entry><bean class="dataSimpleCarver"><constructor-arg value="lpcd"/></bean></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+<!--RimDIA-->    		        <entry><bean class="dataSimpleCarver"><constructor-arg value="wheel.diskHoleDiameter"/></bean></entry>
+<!--RimDiameter--> 			    <entry><bean class="dataSimpleCarver"><constructor-arg value="wheel.diameter"/></bean></entry>
+<!--RimOffset--> 			    <entry><bean class="dataSimpleCarver"><constructor-arg value="wheel.et"/></bean></entry>
+<!--RimType-->                  <entry><bean class="AutoDiscTypeCarver"/></entry>	
+<!--RimWidth-->     			<entry><bean class="dataSimpleCarver"><constructor-arg value="wheel.width"/></bean></entry>
+<!--RunFlat-->     		        <entry>
+                                    <bean class="DataClassifyingRegexpCarver">
+                                        <constructor-arg value="tire.runFlat"/>
+                                        <constructor-arg>
+                                            <list>
+                                                <entry key="1" value="@(?i)да|есть@"/>	
+                                            </list>
+                                        </constructor-arg>
+                                    </bean>
+                                </entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+<!--SpeedIndex-->     		    <entry><bean class="dataSimpleCarver"><constructor-arg value="is"/></bean></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+<!--TireAspectRatio-->     	    <entry><bean class="dataSimpleCarver"><constructor-arg value="tire.height"/></bean></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+<!--TireSectionWidth-->     	<entry><bean class="dataSimpleCarver"><constructor-arg value="tire.width"/></bean></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+<!--TireType-->     			<entry><bean class="AutoTyreSeasonCarver"/></entry>	
+<!--TireYear-->     		    <entry>
+                                    <bean class="dataRegexpCarver">
+										<constructor-arg>
+											<list>
+												<entry value="tire.year"/>
+											</list>
+										</constructor-arg>
+										<constructor-arg value="@(?i)\d{4}@"/>
+									</bean>
+								</entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
+								<entry><bean class="dataNullCarver"/></entry>
