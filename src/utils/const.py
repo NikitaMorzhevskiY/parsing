@@ -809,7 +809,7 @@ CARVERS_FOR_AVITO = {
 """<!--TireType-->     			<entry><bean class="AutoTyreSeasonCarver"/></entry>	"""},
 
     "Марка":{
-        "synonyms": re.compile(r"\bfirma\b", re.IGNORECASE),
+        "synonyms": re.compile(r"\bmake\b", re.IGNORECASE),
         "xml": 
 """                                <entry>
                                     <bean class="dataCompositeCarver">

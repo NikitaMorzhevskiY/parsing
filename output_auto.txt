@@ -1,0 +1,68 @@
+<entry>
+    <bean class="dataCompositeCarver">
+        <constructor-arg>
+            <list>
+                <!--<entry>
+                    <bean class="dataRegexpCarver">
+                        <constructor-arg>
+                            <list>
+                                <entry value="all"/>
+                                <entry value="post"/>
+                                <entry value="name"/>
+                            </list>
+                        </constructor-arg>
+                        <constructor-arg value="@(?i)(.*?)\(?([a-z]*[а-яё]{3,}.*)@"/>
+                    </bean>
+                </entry>-->
+                <entry><bean class="dataSimpleCarver"><constructor-arg value="name"/></bean></entry>
+                <entry><bean class="dataSimpleCarver"><constructor-arg value="note0"/></bean></entry>
+                <entry><bean class="AutoDiscTireMixedCarver"/></entry>
+                <entry><bean class="AutoTyreSeasonCarver"/></entry>
+                <entry><bean class="AutoTyreSpikeCarver"/></entry>
+                <entry><bean class="AutoDiscTypeCarver"/></entry>
+                <entry><bean class="OilTypeDataCarver"/></entry>
+                <entry><bean class="MotorOilApiCarver"/></entry>
+                <entry><bean class="MotorOilAceaCarver"/></entry>
+                <entry><bean class="OilVolumeDataCarver"/></entry>
+                <entry><bean class="MotorOilFuelCarver"/></entry>
+                <entry><bean class="MotorOilEngineCarver"/></entry>
+                <entry><bean class="OilTransportDataCarver"/></entry>
+                <entry><bean class="OilViscosityDataCarver"/></entry>
+                <entry><bean class="GearOilFunctionCarver"/></entry>
+                <entry><bean class="GearOilApiCarver"/></entry>
+                <entry><bean class="OtherOilFunctionCarver"/></entry>
+                <entry><bean class="OilViscosityIsoDataCarver"/></entry>
+                <entry><bean class="BatteryTypeCarver"/></entry>
+                <entry><bean class="BatteryCapacityCarver"/></entry>
+                <entry><bean class="BatteryFixingCarver"/></entry>
+                <entry><bean class="TypeBodyCarver"/></entry>
+                <entry><bean class="StartingCurrentCarver"/></entry>
+                <entry><bean class="SpeakerSystemTypeCarver"/></entry>
+                <entry><bean class="SpeakerTypeCarver"/></entry>
+                <entry><bean class="SpeakerSubwooferTypeCarver"/></entry>
+                <entry><bean class="SpeakerSubwooferBodyCarver"/></entry>
+                <entry><bean class="AmplifierChannelsCarver"/></entry>
+                <entry><bean class="AudioRadioDimCarver"/></entry>    
+                <entry><bean class="AutoPartsPositionCarver"/></entry>    
+                <!--<entry><bean class="BikeFrameSizeCarver"/></entry>
+                <entry><bean class="BikeTypeCarver"/></entry>
+                <entry><bean class="BikeFrameCarver"/></entry>
+                <entry><bean class="BikeWheelsCarver"/></entry>-->
+            </list>
+        </constructor-arg>
+    </bean>
+</entry>
+<entry><bean class="dataSimpleCarver"><constructor-arg value="std.art"/></bean></entry>
+<entry><bean class="PriceCarver"/></entry>
+<entry>
+    <bean class="DataClassifyingRegexpCarver">
+        <constructor-arg value="sell.onDemand"/>
+        <constructor-arg>
+            <list>
+                <entry key="1" value="@(?i)заказ@"/>
+            </list>
+        </constructor-arg>
+    </bean>
+</entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataSimpleCarver"><constructor-arg value="note1"/></bean></entry>

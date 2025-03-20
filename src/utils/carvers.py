@@ -170,7 +170,7 @@ CARVERS_FOR_WATERHEATER = {(
 \t\t\t<entry><bean class="WaterHeaterHeatCarver"/></entry>
 \t\t\t<entry><bean class="WaterHeaterTypeCarver"/></entry>'''}}
 
-CARDERS_FOR_CONDITIONERS = {(
+CARVERS_FOR_CONDITIONERS = {(
     "кондиционер", "сплит-система"
 ):
     {'Наименование':'''\t\t\t\t<entry><bean class="ConditionersTypeCarver"/></entry>
@@ -181,3 +181,80 @@ CARDERS_FOR_CONDITIONERS = {(
     'Описание':'''\t\t\t\t<entry><bean class="ConditionersTypeCarver"/></entry>
 \t\t\t<entry><bean class="ConditionerCompressorCarver"/></entry>
 \t\t\t<entry><bean class="ConditionersAreaCarver"/></entry>'''}}
+ 
+CARVERS_FOR_COMPUTER = {(
+    "оперативная память"):
+    {'Наименование':'''\t\t\t\t<entry><bean class="RamCarver"/></entry>''',
+
+    'Описание':'''\t\t\t\t<entry><bean class="RamCarver"/></entry>'''},
+
+    ("Материнская плата"):
+    {'Наименование':'''\t\t\t\t<entry><bean class="MotherBoardCarver"/></entry>''',
+
+    'Описание':'''\t\t\t\t<entry><bean class="MotherBoardCarver"/></entry>'''}}
+
+CARVERS_FOR_NOTEBOOK = {(
+    "Ноутбук"):
+    {'Наименование':'''\t\t\t\t<entry><bean class="NotebookTypeCarver"/></entry>
+                        \t\t\t<entry><bean class="NotebookScreenSizeCarver"/></entry>
+                        \t\t\t<entry><bean class="NotebookFeaturesCarver"/></entry>''',
+
+    'Описание':'''\t\t\t\t<entry><bean class="NotebookTypeCarver"/></entry>
+                        \t\t\t<entry><bean class="NotebookScreenSizeCarver"/></entry>
+                        \t\t\t<entry><bean class="NotebookFeaturesCarver"/></entry>'''}}
+
+
+CARVERS_FOR_PHONE = {("телефон, смартфон"):
+    {'Наименование':'''\t\t\t\t<entry><bean class="PhoneInternalMemoryCarver"/></entry>
+                        \t\t\t<entry><bean class="PhoneDiagonalCarver"/></entry>
+                        \t\t\t<entry><bean class="PhoneFormFactorCarver"/></entry>
+                        \t\t\t<entry><bean class="ColorCarver"/></entry>
+                        \t\t\t<entry><bean class="PhoneFunctionsCarver"/></entry>''',
+
+    'Описание':'''\t\t\t\t<entry><bean class="PhoneInternalMemoryCarver"/></entry>
+                        \t\t\t<entry><bean class="PhoneDiagonalCarver"/></entry>
+                        \t\t\t<entry><bean class="PhoneFormFactorCarver"/></entry>
+                        \t\t\t<entry><bean class="ColorCarver"/></entry>
+                        \t\t\t<entry><bean class="PhoneFunctionsCarver"/></entry>'''}}
+
+CARVERS_FOR_TV = {("телевизор"):
+    {'Наименование':'''\t\t\t\t<entry><bean class="TvTypeCarver"/></entry>
+                        \t\t\t<entry><bean class="TvDiagonalCarver"/></entry>
+                        \t\t\t<entry><bean class="TvResolutionCarver"/></entry>
+                        \t\t\t<entry><bean class="SmartTvCarver"/></entry>''',
+
+    'Описание':'''\t\t\t\t<entry><bean class="TvTypeCarver"/></entry>
+                        \t\t\t<entry><bean class="TvDiagonalCarver"/></entry>
+                        \t\t\t<entry><bean class="TvResolutionCarver"/></entry>
+                        \t\t\t<entry><bean class="SmartTvCarver"/></entry>'''},
+
+                        ("монитор"):
+    {'Наименование':'''\t\t\t\t<entry><bean class="MatrixTypeCarver"/></entry>
+                        \t\t\t<entry><bean class="DisplayTypeCarver"/></entry>
+                        \t\t\t<entry><bean class="ResolutionCarver"/></entry>
+                        \t\t\t<entry><bean class="SmartTvCarver"/></entry>''',
+
+    'Описание':'''\t\t\t\t<entry><bean class="MatrixTypeCarver"/></entry>
+                        \t\t\t<entry><bean class="DisplayTypeCarver"/></entry>
+                        \t\t\t<entry><bean class="ResolutionCarver"/></entry>
+                        \t\t\t<entry><bean class="SmartTvCarver"/></entry>'''}}
+
+CARVERS_FOR_PDA = {("планшет, ipad"):
+    {'Наименование':'''\t\t\t\t<entry><bean class="PdaDiagonalCarver"/></entry>важно, гляди в wiki
+                        \t\t\t<entry><bean class="PdaOperatingSystemCarver"/></entry>
+                        \t\t\t<entry><bean class="PhoneInternalMemoryCarver"/></entry>''',
+
+    'Описание':'''\t\t\t\t<entry><bean class="PdaDiagonalCarver"/></entry>важно, гляди в wiki
+                        \t\t\t<entry><bean class="PdaOperatingSystemCarver"/></entry>
+                        \t\t\t<entry><bean class="PhoneInternalMemoryCarver"/></entry>'''}}
+
+CARVERS_FOR_WASHER = {("Стирально-сушильная машина, Сушильная машина, Стиральная машина, Центрифуга"):
+    {'Наименование':'''\t\t\t\t<entry><bean class="WasherTypeCarver"/></entry>
+                        \t\t\t<entry><bean class="WasherLoadingFeatureCarver"/></entry>
+                        \t\t\t<entry><bean class="WasherInstallationFeatureCarver"/></entry>
+                        \t\t\t<entry><bean class="WasherMaxLoadCarver"/></entry>''',
+
+    'Описание':'''\t\t\t\t<entry><bean class="WasherTypeCarver"/></entry>
+                        \t\t\t<entry><bean class="WasherLoadingFeatureCarver"/></entry>
+                        \t\t\t<entry><bean class="WasherInstallationFeatureCarver"/></entry>
+                        \t\t\t<entry><bean class="WasherMaxLoadCarver"/></entry>'''}}
