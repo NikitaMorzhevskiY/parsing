@@ -14,7 +14,7 @@ def split_carver_name_descr(column: list) -> dict:
     for attr_name in dir(carvers):
         if attr_name.isupper():  #нужные словари именуются заглавными буквами
             furniture_templates = getattr(carvers, attr_name)
-            if isinstance(furniture_templates, dict):  # Убеждаемся, что это словарь
+            if isinstance(furniture_templates, dict):  # Проверяем словарь ли это
                 for item in column:
                     item_lower = str(item).lower()
                     
