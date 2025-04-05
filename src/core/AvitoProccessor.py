@@ -16,13 +16,15 @@ class AvitoProc:
     
     def _load_file(self):
         """Определяет формат файла и загружает его."""
-
-        if self.file_path.endswith(".csv"):
-            return pd.read_csv(self.file_path, header=self.header_row)
-        elif self.file_path.endswith(".xls") or self.file_path.endswith(".xlsx"):
-            return pd.read_excel(self.file_path, header=self.header_row, sheet_name=self.sheet)
-        else:
-            self.app.log_message(f"Неверный формат файла")      
+        try:
+            if self.file_path.endswith(".csv"):
+                return pd.read_csv(self.file_path, header=self.header_row)
+            elif self.file_path.endswith(".xls") or self.file_path.endswith(".xlsx"):
+                return pd.read_excel(self.file_path, header=self.header_row, sheet_name=self.sheet)
+            else:
+                self.app.log_message(f"Неверный формат файла")      
+        except Exception as e:        
+            self.app.log_message(f"Ошибка при загрузке таблицы: {e}") 
     
     def process_table(self):
         """Обрабатывает таблицу и формирует текстовый результат."""

@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import filedialog, ttk
 import sys
 import os
+from tkinter import messagebox
 
 # Подключение модулей
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -32,7 +33,7 @@ class MyApp:
         tk.Label(category_frame, text="Выберите категорию:", font=("Arial", 10), bg="#ffffff").pack(side=tk.LEFT, padx=10)
         tk.Radiobutton(category_frame, text="Автозапчасти", variable=self.category, value="autoparts", bg="#ffffff", command=self.toggle_sheet_entry).pack(side=tk.LEFT, padx=5)
         tk.Radiobutton(category_frame, text="Общие товары", variable=self.category, value="general", bg="#ffffff", command=self.toggle_sheet_entry).pack(side=tk.LEFT, padx=5)
-        tk.Radiobutton(category_frame, text="Авитовский прайс(в ошибках)", variable=self.category, value="avito", bg="#ffffff", command=self.toggle_sheet_entry).pack(side=tk.LEFT, padx=5)
+        tk.Radiobutton(category_frame, text="Авитовский прайс", variable=self.category, value="avito", bg="#ffffff", command=self.toggle_sheet_entry).pack(side=tk.LEFT, padx=5)
 
         # Блок выбора файла
         file_frame = tk.Frame(main_frame, bg="#ffffff", relief=tk.RIDGE, bd=2, padx=10, pady=10)
@@ -49,13 +50,13 @@ class MyApp:
         input_frame.pack(fill=tk.X, pady=5)
 
         tk.Label(input_frame, text="Введите номер строки с шапкой:", font=("Arial", 10), bg="#ffffff").pack(side=tk.LEFT, padx=10)
-        self.entry_number = tk.Entry(input_frame, width=10)
+        self.entry_number = tk.Entry(input_frame, width=10, bd=2)
         self.entry_number.pack(side=tk.LEFT, padx=10)
 
         # Поле ввода номера страницы (изначально скрыто)
         self.sheet_frame = tk.Frame(input_frame, bg="#ffffff")
         self.sheet_label = tk.Label(self.sheet_frame, text="Введите номер листа:", font=("Arial", 10), bg="#ffffff")
-        self.entry_sheet = tk.Entry(self.sheet_frame, width=10)
+        self.entry_sheet = tk.Entry(self.sheet_frame, width=10, bd=2)
 
         self.button_process = tk.Button(input_frame, text="Запустить", command=self.run_method, bg="#28a745", fg="white")
         self.button_process.pack(side=tk.RIGHT, padx=10)
@@ -69,8 +70,8 @@ class MyApp:
 
         scrollbar = tk.Scrollbar(log_frame, command=self.log_text.yview)
         scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
-        self.log_text.config(yscrollcommand=scrollbar.set)
-
+        self.log_text.config(yscrollcommand=scrollbar.set)      
+                  
         self.toggle_sheet_entry()  # Обновление UI при запуске
 
     def toggle_sheet_entry(self):
@@ -115,6 +116,7 @@ class MyApp:
             else:
                 res = AvitoProc(self.file_path, number, sheet, const, "avito_price.txt", self)
             res.process_table()
+            self.log_message(f"Файл обработан")
         else:
             self.log_message("Ошибка: Выберите файл и введите номер!")
 

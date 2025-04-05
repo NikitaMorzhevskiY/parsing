@@ -61,7 +61,7 @@ class ProcessorForOther:
                         result[unique_key] = [value]
 
                 
-                if column == "Наименование" and pending_data["Наименование"]:
+                if key == "Наименование" and pending_data["Наименование"]:            #Заменил column на key - потестить то ли это, кажется хуйня какая то
                     if "Наименование" in result:
                         result["Наименование"].extend(pending_data["Наименование"])
                     else:
@@ -73,7 +73,7 @@ class ProcessorForOther:
                     pending_data["Наименование"] = []  
 
             
-                if column == "Описание" and pending_data["Описание"]:
+                if key == "Описание" and pending_data["Описание"]:
                     if "Описание" in result:
                         result["Описание"].extend(pending_data["Описание"])
                     else:
@@ -87,7 +87,7 @@ class ProcessorForOther:
                    
 
             self._save_result(result)
-            self.app.log_message(f"Файл обработан") 
+            # self.app.log_message(f"Файл обработан") 
         except Exception as e:
 
             self.app.log_message(f"Ошибка при обработке: {e}")     

@@ -375,7 +375,7 @@ CARVERS_FOR_AUTO = {
 }
 
 CARVERS_FOR_UKV = { "Наименование": {
-        "synonyms": re.compile(r"\b(наименовани[ея]\s*(товар[а|ов])?|Номенклатура\,\sУпаковка)\b", re.IGNORECASE),
+        "synonyms": re.compile(r"\b(наименовани[ея]\s*(товар[а|ов])?|Номенклатура\,\sУпаковка|название)\b", re.IGNORECASE),
         "xml": 
 """\t\t\t\t<entry><bean class="dataSimpleCarver"><constructor-arg value="name"/></bean></entry>
 \t\t\t\t<entry><bean class="dataSimpleCarver"><constructor-arg value="note0"/></bean></entry>"""

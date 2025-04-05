@@ -12,7 +12,7 @@ def split_carver_name_descr(column: list) -> dict:
     
     # Проходим по всем атрибутам модуля const
     for attr_name in dir(carvers):
-        if attr_name.isupper():  # Предполагаем, что нужные словари именуются заглавными буквами
+        if attr_name.isupper():  #нужные словари именуются заглавными буквами
             furniture_templates = getattr(carvers, attr_name)
             if isinstance(furniture_templates, dict):  # Убеждаемся, что это словарь
                 for item in column:
