@@ -1,147 +1,31 @@
-<entry>
-    <bean class="dataCompositeCarver">
-        <constructor-arg>
-            <list>
-                <!--<entry>
-                    <bean class="dataRegexpCarver">
-                        <constructor-arg>
-                            <list>
-                                <entry value="all"/>
-                                <entry value="post"/>
-                                <entry value="name"/>
-                            </list>
-                        </constructor-arg>
-                        <constructor-arg value="@(?i)(.*?)\(?([a-z]*[а-яё]{3,}.*)@"/>
-                    </bean>
-                </entry>-->
-                <entry><bean class="dataSimpleCarver"><constructor-arg value="name"/></bean></entry>
-                <entry><bean class="dataSimpleCarver"><constructor-arg value="note0"/></bean></entry>
-                <entry><bean class="AutoDiscTireMixedCarver"/></entry>
-                <entry><bean class="AutoTyreSeasonCarver"/></entry>
-                <entry><bean class="AutoTyreSpikeCarver"/></entry>
-                <entry><bean class="AutoDiscTypeCarver"/></entry>
-                <entry><bean class="OilTypeDataCarver"/></entry>
-                <entry><bean class="MotorOilApiCarver"/></entry>
-                <entry><bean class="MotorOilAceaCarver"/></entry>
-                <entry><bean class="OilVolumeDataCarver"/></entry>
-                <entry><bean class="MotorOilFuelCarver"/></entry>
-                <entry><bean class="MotorOilEngineCarver"/></entry>
-                <entry><bean class="OilTransportDataCarver"/></entry>
-                <entry><bean class="OilViscosityDataCarver"/></entry>
-                <entry><bean class="GearOilFunctionCarver"/></entry>
-                <entry><bean class="GearOilApiCarver"/></entry>
-                <entry><bean class="OtherOilFunctionCarver"/></entry>
-                <entry><bean class="OilViscosityIsoDataCarver"/></entry>
-                <entry><bean class="BatteryTypeCarver"/></entry>
-                <entry><bean class="BatteryCapacityCarver"/></entry>
-                <entry><bean class="BatteryFixingCarver"/></entry>
-                <entry><bean class="TypeBodyCarver"/></entry>
-                <entry><bean class="StartingCurrentCarver"/></entry>
-                <entry><bean class="SpeakerSystemTypeCarver"/></entry>
-                <entry><bean class="SpeakerTypeCarver"/></entry>
-                <entry><bean class="SpeakerSubwooferTypeCarver"/></entry>
-                <entry><bean class="SpeakerSubwooferBodyCarver"/></entry>
-                <entry><bean class="AmplifierChannelsCarver"/></entry>
-                <entry><bean class="AudioRadioDimCarver"/></entry>    
-                <entry><bean class="AutoPartsPositionCarver"/></entry>    
-                <!--<entry><bean class="BikeFrameSizeCarver"/></entry>
-                <entry><bean class="BikeTypeCarver"/></entry>
-                <entry><bean class="BikeFrameCarver"/></entry>
-                <entry><bean class="BikeWheelsCarver"/></entry>-->
-            </list>
-        </constructor-arg>
-    </bean>
-</entry>
-<entry><bean class="dataSimpleCarver"><constructor-arg value="std.art"/></bean></entry>
-<entry>
-    <bean class="dataCompositeCarver">
-        <constructor-arg>
-            <list>
-                <entry><bean class="dataSimpleCarver"><constructor-arg value="maker"/></bean></entry>
-                <entry><bean class="dataSimpleCarver"><constructor-arg value="autoParts.manufacturer.text"/></bean></entry>
-            </list>
-        </constructor-arg>
-    </bean>
-</entry>
-<entry><bean class="PriceCarver"/></entry>
 <entry><bean class="dataNullCarver"/></entry>
 <entry>
-    <bean class="dataCompositeCarver">
+    <bean class="DataSplittedUrisCarver">
         <constructor-arg>
             <list>
-                <entry>
-                    <bean class="DataClassifyingRegexpCarver">
-                        <constructor-arg value="sell.condition"/>
-                        <constructor-arg>
-                            <list>
-                                <entry key="used" value="@(?i)\bб[\.\/\]?у\b|подержан|контр@"/>
-                                <entry key="new" value="@(?i)нов@"/>
-                            </list>
-                        </constructor-arg>
-                    </bean>
-                </entry>
-                <entry>
-                    <bean class="DataClassifyingRegexpCarver">
-                        <constructor-arg value="autoParts.authenticity"/>
-                        <constructor-arg>
-                            <list>
-                                <entry key="original" value="@(?i)контр@"/>
-                            </list>
-                        </constructor-arg>
-                    </bean>
-                </entry>
-                <entry><bean class="dataSimpleCarver"><constructor-arg value="condition"/></bean></entry>
+                <entry value="image1"/>
+                <entry value="image2"/>
+                <entry value="image3"/>
+                <entry value="image4"/>
+                <entry value="image5"/>
+                <entry value="image6"/>
+                <entry value="image7"/>
+                <entry value="image8"/>
+                <entry value="image9"/>
+                <entry value="image10"/>
+                <entry value="image11"/>
+                <entry value="image12"/>
+                <entry value="image13"/>
+                <entry value="image14"/>
+                <entry value="image15"/>
+                <entry value="image16"/>
+                <entry value="image17"/>
+                <entry value="image18"/>
+                <entry value="image19"/>
+                <entry value="image20"/>
             </list>
         </constructor-arg>
-    </bean>
-</entry>
-<entry>
-    <bean class="DataClassifyingRegexpCarver">
-        <constructor-arg value="sell.onDemand"/>
-        <constructor-arg>
-            <list>
-                <entry key="1" value="@(?i)заказ@"/>
-            </list>
-        </constructor-arg>
-    </bean>
-</entry>
-<entry>
-    <bean class="dataCompositeCarver">
-        <constructor-arg>
-            <list>
-                <entry>
-                    <bean class="dataRegexpCarver">
-                        <constructor-arg>
-                            <list>
-                                <entry value="all"/>
-                                <entry value="day"/>
-                                </list>
-                            </constructor-arg>
-                        <constructor-arg value="@(?i)(\b[1-9]\d?\s?\-\s?\d{1,2}|\b[2-9]\b|\b[1-9]\d\b)@"/>
-                    </bean>
-                </entry>
-                <entry>
-                    <bean class="DataClassifyingRegexpCarver">
-                        <constructor-arg value="day"/>
-                        <constructor-arg>
-                            <list>
-                                <entry key="" value="@(?i)^\s*дня\s*$|\b1\sдень|один\sдень|в\s*течени[ие]\s*1?\s*дня?|^\s*1\s*$|час|^\s*0\s*$@"/>
-                            </list>
-                        </constructor-arg>
-                    </bean>
-                </entry>
-                <entry>
-                    <bean class="DataClassifyingRegexpCarver">
-                        <constructor-arg value="zakaz"/>
-                        <constructor-arg>
-                            <list>
-                                <entry key="1 дня" value="@(?i)сегодня|\s*\b0\b\s?\-\s?\b1\b\s*$|^\s*дня?\s*$|^\s*\b1\s*день|один\sдень|в\s*течени[ие]\s*1?\s*дня|^\s*1\s*$|час|^\s*0\s*$@"/>
-                            </list>
-                        </constructor-arg>
-                    </bean>
-                </entry>
-            </list>
-        </constructor-arg>
+        <constructor-arg value="@[\s\,\;]+@"/>
     </bean>
 </entry>
 <entry>
@@ -173,5 +57,4 @@
         <constructor-arg value="@[\s\,\;]+@"/>
     </bean>
 </entry>
-<entry><bean class="dataNullCarver"/></entry>
-<entry><bean class="dataSimpleCarver"><constructor-arg value="note1"/></bean></entry>
+<entry><bean class="PriceCarver"/></entry>

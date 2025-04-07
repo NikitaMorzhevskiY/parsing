@@ -38,8 +38,11 @@ class ProcessorForOther:
 
                     key, value = xml_fragment
                     
-                    if key in result:
+                    if key in result and key in ['Наименование', 'Описание']:
                         result[key].extend(value)
+                    elif key in result:                  #для повторных колонок
+                        key_column = f"{key}_{column}"
+                        result[key_column] = [value]
                     else:
                         result[key] = [value]
                     

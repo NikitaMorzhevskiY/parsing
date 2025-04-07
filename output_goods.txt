@@ -1,64 +1,192 @@
-<entry><bean class="dataSimpleCarver"><constructor-arg value="std.art"/></bean></entry>
-<entry><bean class="dataNullCarver"/></entry>
 <entry>
 	<bean class="dataCompositeCarver">
 		<constructor-arg>
 			<list>
 				<entry><bean class="dataSimpleCarver"><constructor-arg value="name"/></bean></entry>
 				<entry><bean class="dataSimpleCarver"><constructor-arg value="note0"/></bean></entry>
-				<entry><bean class="FurnitureStolyFormCarver"/></entry>
-    			<entry><bean class="FurnitureStolyMaterialCarver"/></entry>
-    			<entry><bean class="FurnitureStolyFeatureCarver"/></entry>
-    			<entry><bean class="FurnitureStolyTransformCarver"/></entry>
+	
+	
+	
+	
+<
+e
+n
+t
+r
+y
+>
+<
+b
+e
+a
+n
+ 
+c
+l
+a
+s
+s
+=
+"
+d
+a
+t
+a
+S
+i
+m
+p
+l
+e
+C
+a
+r
+v
+e
+r
+"
+>
+<
+c
+o
+n
+s
+t
+r
+u
+c
+t
+o
+r
+-
+a
+r
+g
+ 
+v
+a
+l
+u
+e
+=
+"
+n
+a
+m
+e
+"
+/
+>
+<
+/
+b
+e
+a
+n
+>
+<
+/
+e
+n
+t
+r
+y
+>
+
+
+	
+	
+	
+	
+<
+e
+n
+t
+r
+y
+>
+<
+b
+e
+a
+n
+ 
+c
+l
+a
+s
+s
+=
+"
+d
+a
+t
+a
+S
+i
+m
+p
+l
+e
+C
+a
+r
+v
+e
+r
+"
+>
+<
+c
+o
+n
+s
+t
+r
+u
+c
+t
+o
+r
+-
+a
+r
+g
+ 
+v
+a
+l
+u
+e
+=
+"
+n
+o
+t
+e
+0
+"
+/
+>
+<
+/
+b
+e
+a
+n
+>
+<
+/
+e
+n
+t
+r
+y
+>
 			</list>
 		</constructor-arg>
 	</bean>
 </entry>
-<entry>
-	<bean class="dataCompositeCarver">
-		<constructor-arg>
-			<list>
-				<entry><bean class="dataSimpleCarver"><constructor-arg value="note1"/></bean></entry>
-				<entry><bean class="FurnitureStolyFormCarver"/></entry>
-    			<entry><bean class="FurnitureStolyMaterialCarver"/></entry>
-    			<entry><bean class="FurnitureStolyFeatureCarver"/></entry>
-    			<entry><bean class="FurnitureStolyTransformCarver"/></entry>
-				<entry><bean class="ArmchairsSupportCarver"/></entry>
-    			<entry><bean class="ArmchairsFeatureCarver"/></entry>
-    			<entry><bean class="ArmchairsMaterialCarver"/></entry>
-				<entry><bean class="ChairsFrameMaterialCarver"/></entry>
-    			<entry><bean class="ChairsUpholsteryMaterialCarver"/></entry>
-    			<entry><bean class="ChairsFeatureCarver"/></entry>
-				<entry><bean class="SofaFillingCarver"/></entry>
-    			<entry><bean class="SofaTransformerCarver"/></entry>
-    			<entry><bean class="SofaMaterialCarver"/></entry>
-    			<entry><bean class="SofaFeatureCarver"/></entry>
-			</list>
-		</constructor-arg>
-	</bean>
-</entry>
-<entry>
-    <bean class="DataClassifyingRegexpCarver">
-        <constructor-arg value="sell.condition"/>
-        <constructor-arg>
-            <list>
-                <entry key="used" value="@(?i)\bб[\.\/\]?у\b|подержан|контр@"/>
-                <entry key="new" value="@(?i)нов@"/>
-            </list>
-        </constructor-arg>
-    </bean>
-</entry>
-<entry>
-    <bean class="DataClassifyingRegexpCarver">
-        <constructor-arg value="sell.onDemand"/>
-        <constructor-arg>
-            <list>
-                <entry key="1" value="@(?i)заказ@"/>
-            </list>
-        </constructor-arg>
-    </bean>
-</entry>
-<entry><bean class="PriceCarver"/></entry>
 <entry>
     <bean class="DataSplittedUrisCarver">
         <constructor-arg>
@@ -88,3 +216,4 @@
         <constructor-arg value="@[\s\,\;]+@"/>
     </bean>
 </entry>
+<entry><bean class="PriceCarver"/></entry>
