@@ -60,7 +60,7 @@ CARVERS_FOR_AUTO = {
 </entry>"""                    
  },
     "Цена": {
-        "synonyms": re.compile(r"\bцена|стоимость\b", re.IGNORECASE),
+        "synonyms": re.compile(r"\bцена|стоимость|розничные\b", re.IGNORECASE),
         "xml": """<entry><bean class="PriceCarver"/></entry>"""
     },
     "Артикул":{
@@ -68,7 +68,7 @@ CARVERS_FOR_AUTO = {
         "xml": """<entry><bean class="dataSimpleCarver"><constructor-arg value="std.art"/></bean></entry>"""
     },
     "Производитель":{
-        "synonyms": re.compile(r"\bпроизводитель\b", re.IGNORECASE),
+        "synonyms": re.compile(r"\bпроизводитель\b|\bпроизв", re.IGNORECASE),
         "xml": 
 """<entry>
     <bean class="dataCompositeCarver">
@@ -391,8 +391,7 @@ CARVERS_FOR_UKV = { "Наименование": {
     "Состояние":{
         "synonyms": re.compile(r"\bсостояние|новый\/б\.у\b", re.IGNORECASE),
         "xml": 
-"""
-<entry>
+"""<entry>
     <bean class="DataClassifyingRegexpCarver">
         <constructor-arg value="sell.condition"/>
         <constructor-arg>
@@ -614,6 +613,26 @@ CARVERS_FOR_AVITO = {
                                                 </entry>
                                             </list>
                                         </constructor-arg>
+                                    </bean>
+                                </entry>"""
+    },
+
+    "Замена":{
+        "synonyms": re.compile(r"\boriginaloem\b", re.IGNORECASE),
+        "xml": 
+"""                                <entry>
+                                    <bean class="dataPregReplaceFormatCarver">
+                                       <constructor-arg>
+                                            <bean class="dataPregReplaceFormatCarver">
+                                                <constructor-arg>
+                                                    <bean class="dataSimpleCarver"><constructor-arg value="autoParts.partNumberSubstitutes"/></bean>
+                                                </constructor-arg>
+                                                <constructor-arg value="@[\/\\;\+]@"/>
+                                                <constructor-arg value=","/>
+                                            </bean>
+                                        </constructor-arg>
+                                        <constructor-arg value="@[\s\.\-]@"/>
+                                        <constructor-arg value=""/>
                                     </bean>
                                 </entry>"""
     },

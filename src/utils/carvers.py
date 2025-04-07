@@ -116,8 +116,8 @@ CARVERS_FOR_SANTECHNIKA ={
     'Описание':'''\t\t\t\t<entry><bean class="SanitaryShapeCarver"/></entry>
     \t\t\t<entry><bean class="SanitaryBathCarver"/></entry>
     \t\t\t<entry><bean class="SanitaryBathCarver"/></entry>
-    \t\t\t<entry><bean class="SanitaryBathCarver"/></entry>'''},
-    ('ванна','раковина'):{'''\t\t\t\t<entry><bean class="SanitaryColorCarver"/></entry>'''}
+    \t\t\t<entry><bean class="SanitaryBathCarver"/></entry>'''}
+    #('ванна','раковина'):{'''\t\t\t\t<entry><bean class="SanitaryColorCarver"/></entry>'''}
 
 }
 

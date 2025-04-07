@@ -49,7 +49,7 @@ class AvitoProc:
             for key, value in self.synonyms.items():
                 if value["synonyms"].search(column_name):  
                     return value["xml"]
-            return f'\t\t\t\t\t\t\t\t<entry><bean class="dataNullCarver"/></entry>'
+            return f'\t\t\t\t<entry><bean class="dataNullCarver"/></entry>'
         
         except Exception as e:
             self.app.log_message(f'Произошла ошибка: {e}')

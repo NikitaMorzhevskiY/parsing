@@ -3,7 +3,7 @@ from collections import defaultdict
 import utils.const as const
 from transliterate.decorators import transliterate_function
 import utils.func as func 
-
+import re
 
 class ProcessorForOther:
     def __init__(self, file_path: str, header_row: int, synonyms: dict, output_file: str, app):
@@ -47,6 +47,7 @@ class ProcessorForOther:
 
                         additional_data = func.split_carver_name_descr(self.return_items_cilumn(column))
                         
+                        
                         for add_key, add_values in additional_data.items():
                             pending_data[add_key].extend(add_values) 
 
@@ -61,7 +62,7 @@ class ProcessorForOther:
                         result[unique_key] = [value]
 
                 
-                if key == "Наименование" and pending_data["Наименование"]:            #Заменил column на key - потестить то ли это, кажется хуйня какая то
+                if re.search(r"\b(наименовани[ея]\s*(товар[а|ов])?|Номенклатура\,\sУпаковка|название)\b", column, re.IGNORECASE) and pending_data["Наименование"]:            #Заменил column на key - потестить то ли это, кажется хуйня какая то
                     if "Наименование" in result:
                         result["Наименование"].extend(pending_data["Наименование"])
                     else:
@@ -73,7 +74,7 @@ class ProcessorForOther:
                     pending_data["Наименование"] = []  
 
             
-                if key == "Описание" and pending_data["Описание"]:
+                if re.search(r"\bописание\b", column, re.IGNORECASE) and pending_data["Описание"]:
                     if "Описание" in result:
                         result["Описание"].extend(pending_data["Описание"])
                     else:
