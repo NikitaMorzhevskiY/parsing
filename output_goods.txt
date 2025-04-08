@@ -1,192 +1,42 @@
+<entry><bean class="dataSimpleCarver"><constructor-arg value="std.art"/></bean></entry>
+<entry><bean class="dataSimpleCarver"><constructor-arg value="std.art"/></bean></entry>
+<entry><bean class="dataSimpleCarver"><constructor-arg value="std.art"/></bean></entry>
+<entry><bean class="PriceCarver"/></entry>
+<entry><bean class="dataSimpleCarver"><constructor-arg value="std.art"/></bean></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
 <entry>
 	<bean class="dataCompositeCarver">
 		<constructor-arg>
 			<list>
 				<entry><bean class="dataSimpleCarver"><constructor-arg value="name"/></bean></entry>
 				<entry><bean class="dataSimpleCarver"><constructor-arg value="note0"/></bean></entry>
-	
-	
-	
-	
-<
-e
-n
-t
-r
-y
->
-<
-b
-e
-a
-n
- 
-c
-l
-a
-s
-s
-=
-"
-d
-a
-t
-a
-S
-i
-m
-p
-l
-e
-C
-a
-r
-v
-e
-r
-"
->
-<
-c
-o
-n
-s
-t
-r
-u
-c
-t
-o
-r
--
-a
-r
-g
- 
-v
-a
-l
-u
-e
-=
-"
-n
-a
-m
-e
-"
-/
->
-<
-/
-b
-e
-a
-n
->
-<
-/
-e
-n
-t
-r
-y
->
-
-
-	
-	
-	
-	
-<
-e
-n
-t
-r
-y
->
-<
-b
-e
-a
-n
- 
-c
-l
-a
-s
-s
-=
-"
-d
-a
-t
-a
-S
-i
-m
-p
-l
-e
-C
-a
-r
-v
-e
-r
-"
->
-<
-c
-o
-n
-s
-t
-r
-u
-c
-t
-o
-r
--
-a
-r
-g
- 
-v
-a
-l
-u
-e
-=
-"
-n
-o
-t
-e
-0
-"
-/
->
-<
-/
-b
-e
-a
-n
->
-<
-/
-e
-n
-t
-r
-y
->
+				<entry><bean class="ConditionersTypeCarver"/></entry>
+			<entry><bean class="ConditionerCompressorCarver"/></entry>
+			<entry><bean class="ConditionerFormCarver"/></entry>
+			<entry><bean class="ConditionersAreaCarver"/></entry>
 			</list>
 		</constructor-arg>
 	</bean>
 </entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry>
+	<bean class="dataCompositeCarver">
+		<constructor-arg>
+			<list>
+				<entry><bean class="dataSimpleCarver"><constructor-arg value="note1"/></bean></entry>
+				<entry><bean class="ConditionersTypeCarver"/></entry>
+			<entry><bean class="ConditionerCompressorCarver"/></entry>
+			<entry><bean class="ConditionersAreaCarver"/></entry>
+			</list>
+		</constructor-arg>
+	</bean>
+</entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
 <entry>
     <bean class="DataSplittedUrisCarver">
         <constructor-arg>
@@ -216,4 +66,185 @@ y
         <constructor-arg value="@[\s\,\;]+@"/>
     </bean>
 </entry>
-<entry><bean class="PriceCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>

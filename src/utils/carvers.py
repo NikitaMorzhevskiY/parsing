@@ -219,14 +219,14 @@ CARVERS_FOR_PHONE = {("телефон, смартфон"):
 
 CARVERS_FOR_TV = {("телевизор"):
     {'Наименование':'''\t\t\t\t<entry><bean class="TvTypeCarver"/></entry>
-                        \t\t\t<entry><bean class="TvDiagonalCarver"/></entry>
-                        \t\t\t<entry><bean class="TvResolutionCarver"/></entry>
-                        \t\t\t<entry><bean class="SmartTvCarver"/></entry>''',
+    \t\t\t<entry><bean class="TvDiagonalCarver"/></entry>
+    \t\t\t<entry><bean class="TvResolutionCarver"/></entry>
+    \t\t\t<entry><bean class="SmartTvCarver"/></entry>''',
 
     'Описание':'''\t\t\t\t<entry><bean class="TvTypeCarver"/></entry>
-                        \t\t\t<entry><bean class="TvDiagonalCarver"/></entry>
-                        \t\t\t<entry><bean class="TvResolutionCarver"/></entry>
-                        \t\t\t<entry><bean class="SmartTvCarver"/></entry>'''},
+    \t\t\t<entry><bean class="TvDiagonalCarver"/></entry>
+    \t\t\t<entry><bean class="TvResolutionCarver"/></entry>
+    \t\t\t<entry><bean class="SmartTvCarver"/></entry>'''},
 
                         ("монитор"):
     {'Наименование':'''\t\t\t\t<entry><bean class="MatrixTypeCarver"/></entry>

@@ -385,7 +385,7 @@ CARVERS_FOR_UKV = { "Наименование": {
         "xml": """<entry><bean class="PriceCarver"/></entry>"""
     },
     "Артикул":{
-        "synonyms": re.compile(r"\bартикул|код\b", re.IGNORECASE),
+        "synonyms": re.compile(r"\b(артикул|код)\b", re.IGNORECASE),
         "xml": """<entry><bean class="dataSimpleCarver"><constructor-arg value="std.art"/></bean></entry>"""
     },
     "Состояние":{
@@ -480,7 +480,7 @@ CARVERS_FOR_UKV = { "Наименование": {
 </entry>"""
     },
     "Фото":{
-        "synonyms": re.compile(r"\bфото(графи[яи])?\b", re.IGNORECASE),
+        "synonyms": re.compile(r"\bфото(графи[яи])?|изображения\b", re.IGNORECASE),
         "xml":
 """<entry>
     <bean class="DataSplittedUrisCarver">
@@ -872,86 +872,94 @@ CARVERS_FOR_AVITO = {
 										</constructor-arg>
 										<constructor-arg value="@(?i)\d{4}@"/>
 									</bean>
-								</entry>"""}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+								</entry>"""},     
+
+    "Применимость": {"synonyms": re.compile(r"\bCompatibleCars\b", re.IGNORECASE),
+                    "xml": 
+"""<entry><bean class="dataSimpleCarver"><constructor-arg value="prim"/></bean></entry>"""},     
+
+    "Страна": {"synonyms": re.compile(r"\bcountry\b", re.IGNORECASE),
+                    "xml": 
+"""<entry><bean class="dataSimpleCarver"><constructor-arg value="country"/></bean></entry>"""}
 
 
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
