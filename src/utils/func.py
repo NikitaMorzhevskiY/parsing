@@ -1,4 +1,3 @@
-import utils.carvers as carvers   
 import re
 from collections import defaultdict
 
@@ -6,7 +5,7 @@ from collections import defaultdict
 def split_carver_name_descr(column: list, carvers_dict: dict) -> dict:
     """
     Принимает список значений из колонки таблицы и словарь с карверами.
-    Возвращает словарь с секциями 'Наименование' и 'Описание' и соответствующими XML.
+    Возвращает словарь с ключами 'Наименование' и 'Описание' и соответствующими карверами.
     """
     result = defaultdict(list)
 
@@ -18,7 +17,7 @@ def split_carver_name_descr(column: list, carvers_dict: dict) -> dict:
             for word in words:
                 if word in keywords:
                     for section, xml in carver_sections.items():
-                        entry = f"{xml} {word}"
+                        entry = f"{xml} <!--{word}-->"
                         if entry not in result[section]:
                             result[section].append(entry)
                     break  # больше не ищем в этом carvers_dict

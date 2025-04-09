@@ -1,32 +1,107 @@
+<entry><bean class="dataSimpleCarver"><constructor-arg value="std.art"/></bean></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
 <entry>
 	<bean class="dataCompositeCarver">
 		<constructor-arg>
 			<list>
 				<entry><bean class="dataSimpleCarver"><constructor-arg value="name"/></bean></entry>
 				<entry><bean class="dataSimpleCarver"><constructor-arg value="note0"/></bean></entry>
+				<entry><bean class="HomeToolsBatteryCarver"/></entry>
+    			<entry><bean class="HomeToolsDiscCarver"/></entry>
+    			<entry><bean class="HomeToolsEngineCarver"/></entry>
+    			<entry><bean class="HomeToolsSawCarver"/></entry>
+    			<entry><bean class="HomeToolsPowerCarver"/></entry> <!--бензопила-->
+				<entry><bean class="HomeToolsBatteryCarver"/></entry>
+    			<entry><bean class="HomeToolsSquareCarver"/></entry>
+    			<entry><bean class="HomeToolsPowerSupplyCarver"/></entry>
+    			<entry><bean class="HomeToolsPowerCarver"/></entry>
+    			<entry><bean class="HomeToolsDiscCarver"/></entry>
+    			<entry><bean class="HomeToolsGrinderCarver"/></entry>
+    			<entry><bean class="HomeToolsHammerCarver"/></entry>
+    			<entry><bean class="HomeToolsPneumaticCarver"/></entry>
+    			<entry><bean class="HomeToolsDrillCarver"/></entry> <!--винтоверт-->
+				<entry><bean class="HomeToolsBatteryCarver"/></entry>
+    			<entry><bean class="HomeToolsSquareCarver"/></entry>
+    			<entry><bean class="HomeToolsPowerSupplyCarver"/></entry>
+    			<entry><bean class="HomeToolsPowerCarver"/></entry>
+    			<entry><bean class="HomeToolsDiscCarver"/></entry>
+    			<entry><bean class="HomeToolsGrinderCarver"/></entry>
+    			<entry><bean class="HomeToolsHammerCarver"/></entry>
+    			<entry><bean class="HomeToolsPneumaticCarver"/></entry>
+    			<entry><bean class="HomeToolsDrillCarver"/></entry> <!--гайковерт-->
 				<entry><bean class="GeneratorPowerCarver"/></entry>
     			<entry><bean class="GeneratorVoltageCarver"/></entry>
     			<entry><bean class="GeneratorFeaturesCarver"/></entry>
     			<entry><bean class="GeneratorStartTypeCarver"/></entry>
-    			<entry><bean class="GeneratorTypeCarver"/></entry> генератор
-				<entry><bean class="FurnitureCabinetsMaterialCarver"/></entry>
-    			<entry><bean class="FurnitureCabinetsDoorsCarver"/></entry>
-    			<entry><bean class="FurnitureCabinetsFeatureCarver"/></entry> шкаф
-				<entry><bean class="ConditionersTypeCarver"/></entry>
-    			<entry><bean class="ConditionerCompressorCarver"/></entry>
-    			<entry><bean class="ConditionerFormCarver"/></entry>
-    			<entry><bean class="ConditionersAreaCarver"/></entry> кондиционер
-				<entry><bean class="FurnitureCabinetsMaterialCarver"/></entry>
-    			<entry><bean class="FurnitureCabinetsDoorsCarver"/></entry>
-    			<entry><bean class="FurnitureCabinetsFeatureCarver"/></entry> полка
-				<entry><bean class="MatrixTypeCarver"/></entry>
-    			<entry><bean class="DisplayTypeCarver"/></entry>
-    			<entry><bean class="ResolutionCarver"/></entry>
-    			<entry><bean class="SmartTvCarver"/></entry> монитор
+    			<entry><bean class="GeneratorTypeCarver"/></entry> <!--генератор-->
+				<entry><bean class="HomeToolsBatteryCarver"/></entry>
+    			<entry><bean class="HomeToolsSquareCarver"/></entry>
+    			<entry><bean class="HomeToolsPowerSupplyCarver"/></entry>
+    			<entry><bean class="HomeToolsPowerCarver"/></entry>
+    			<entry><bean class="HomeToolsDiscCarver"/></entry>
+    			<entry><bean class="HomeToolsGrinderCarver"/></entry>
+    			<entry><bean class="HomeToolsHammerCarver"/></entry>
+    			<entry><bean class="HomeToolsPneumaticCarver"/></entry>
+    			<entry><bean class="HomeToolsDrillCarver"/></entry> <!--гравер-->
+				<entry><bean class="HomeToolsBatteryCarver"/></entry>
+    			<entry><bean class="HomeToolsSquareCarver"/></entry>
+    			<entry><bean class="HomeToolsPowerSupplyCarver"/></entry>
+    			<entry><bean class="HomeToolsPowerCarver"/></entry>
+    			<entry><bean class="HomeToolsDiscCarver"/></entry>
+    			<entry><bean class="HomeToolsGrinderCarver"/></entry>
+    			<entry><bean class="HomeToolsHammerCarver"/></entry>
+    			<entry><bean class="HomeToolsPneumaticCarver"/></entry>
+    			<entry><bean class="HomeToolsDrillCarver"/></entry> <!--дрель-->
+				<entry><bean class="HomeToolsBatteryCarver"/></entry>
+    			<entry><bean class="HomeToolsSquareCarver"/></entry>
+    			<entry><bean class="HomeToolsPowerSupplyCarver"/></entry>
+    			<entry><bean class="HomeToolsPowerCarver"/></entry>
+    			<entry><bean class="HomeToolsDiscCarver"/></entry>
+    			<entry><bean class="HomeToolsGrinderCarver"/></entry>
+    			<entry><bean class="HomeToolsHammerCarver"/></entry>
+    			<entry><bean class="HomeToolsPneumaticCarver"/></entry>
+    			<entry><bean class="HomeToolsDrillCarver"/></entry> <!--отвертка-->
+				<entry><bean class="HomeToolsBatteryCarver"/></entry>
+    			<entry><bean class="HomeToolsSquareCarver"/></entry>
+    			<entry><bean class="HomeToolsPowerSupplyCarver"/></entry>
+    			<entry><bean class="HomeToolsPowerCarver"/></entry>
+    			<entry><bean class="HomeToolsDiscCarver"/></entry>
+    			<entry><bean class="HomeToolsGrinderCarver"/></entry>
+    			<entry><bean class="HomeToolsHammerCarver"/></entry>
+    			<entry><bean class="HomeToolsPneumaticCarver"/></entry>
+    			<entry><bean class="HomeToolsDrillCarver"/></entry> <!--лобзик-->
+				<entry><bean class="HomeToolsBatteryCarver"/></entry>
+    			<entry><bean class="HomeToolsDiscCarver"/></entry>
+    			<entry><bean class="HomeToolsEngineCarver"/></entry>
+    			<entry><bean class="HomeToolsSawCarver"/></entry>
+    			<entry><bean class="HomeToolsPowerCarver"/></entry> <!--пила-->
+				<entry><bean class="HomeToolsBatteryCarver"/></entry>
+    			<entry><bean class="HomeToolsSquareCarver"/></entry>
+    			<entry><bean class="HomeToolsPowerSupplyCarver"/></entry>
+    			<entry><bean class="HomeToolsPowerCarver"/></entry>
+    			<entry><bean class="HomeToolsDiscCarver"/></entry>
+    			<entry><bean class="HomeToolsGrinderCarver"/></entry>
+    			<entry><bean class="HomeToolsHammerCarver"/></entry>
+    			<entry><bean class="HomeToolsPneumaticCarver"/></entry>
+    			<entry><bean class="HomeToolsDrillCarver"/></entry> <!--ножницы-->
+				<entry><bean class="HomeToolsBatteryCarver"/></entry>
+    			<entry><bean class="HomeToolsSquareCarver"/></entry>
+    			<entry><bean class="HomeToolsPowerSupplyCarver"/></entry>
+    			<entry><bean class="HomeToolsPowerCarver"/></entry>
+    			<entry><bean class="HomeToolsDiscCarver"/></entry>
+    			<entry><bean class="HomeToolsGrinderCarver"/></entry>
+    			<entry><bean class="HomeToolsHammerCarver"/></entry>
+    			<entry><bean class="HomeToolsPneumaticCarver"/></entry>
+    			<entry><bean class="HomeToolsDrillCarver"/></entry> <!--перфоратор-->
 				<entry><bean class="FurnitureStolyFormCarver"/></entry>
     			<entry><bean class="FurnitureStolyMaterialCarver"/></entry>
     			<entry><bean class="FurnitureStolyFeatureCarver"/></entry>
-    			<entry><bean class="FurnitureStolyTransformCarver"/></entry> стол
+    			<entry><bean class="FurnitureStolyTransformCarver"/></entry> <!--стол-->
 				<entry><bean class="HomeToolsBatteryCarver"/></entry>
     			<entry><bean class="HomeToolsSquareCarver"/></entry>
     			<entry><bean class="HomeToolsPowerSupplyCarver"/></entry>
@@ -35,7 +110,7 @@
     			<entry><bean class="HomeToolsGrinderCarver"/></entry>
     			<entry><bean class="HomeToolsHammerCarver"/></entry>
     			<entry><bean class="HomeToolsPneumaticCarver"/></entry>
-    			<entry><bean class="HomeToolsDrillCarver"/></entry> болторез
+    			<entry><bean class="HomeToolsDrillCarver"/></entry> <!--рубанок-->
 				<entry><bean class="HomeToolsBatteryCarver"/></entry>
     			<entry><bean class="HomeToolsSquareCarver"/></entry>
     			<entry><bean class="HomeToolsPowerSupplyCarver"/></entry>
@@ -44,7 +119,7 @@
     			<entry><bean class="HomeToolsGrinderCarver"/></entry>
     			<entry><bean class="HomeToolsHammerCarver"/></entry>
     			<entry><bean class="HomeToolsPneumaticCarver"/></entry>
-    			<entry><bean class="HomeToolsDrillCarver"/></entry> ножницы
+    			<entry><bean class="HomeToolsDrillCarver"/></entry> <!--степлер-->
 				<entry><bean class="HomeToolsBatteryCarver"/></entry>
     			<entry><bean class="HomeToolsSquareCarver"/></entry>
     			<entry><bean class="HomeToolsPowerSupplyCarver"/></entry>
@@ -53,7 +128,7 @@
     			<entry><bean class="HomeToolsGrinderCarver"/></entry>
     			<entry><bean class="HomeToolsHammerCarver"/></entry>
     			<entry><bean class="HomeToolsPneumaticCarver"/></entry>
-    			<entry><bean class="HomeToolsDrillCarver"/></entry> заклепочник
+    			<entry><bean class="HomeToolsDrillCarver"/></entry> <!--фрезер-->
 				<entry><bean class="HomeToolsBatteryCarver"/></entry>
     			<entry><bean class="HomeToolsSquareCarver"/></entry>
     			<entry><bean class="HomeToolsPowerSupplyCarver"/></entry>
@@ -62,7 +137,7 @@
     			<entry><bean class="HomeToolsGrinderCarver"/></entry>
     			<entry><bean class="HomeToolsHammerCarver"/></entry>
     			<entry><bean class="HomeToolsPneumaticCarver"/></entry>
-    			<entry><bean class="HomeToolsDrillCarver"/></entry> степлер
+    			<entry><bean class="HomeToolsDrillCarver"/></entry> <!--шлифмашина-->
 				<entry><bean class="HomeToolsBatteryCarver"/></entry>
     			<entry><bean class="HomeToolsSquareCarver"/></entry>
     			<entry><bean class="HomeToolsPowerSupplyCarver"/></entry>
@@ -71,121 +146,27 @@
     			<entry><bean class="HomeToolsGrinderCarver"/></entry>
     			<entry><bean class="HomeToolsHammerCarver"/></entry>
     			<entry><bean class="HomeToolsPneumaticCarver"/></entry>
-    			<entry><bean class="HomeToolsDrillCarver"/></entry> отвертка
-				<entry><bean class="FurnitureCabinetsMaterialCarver"/></entry>
-    			<entry><bean class="FurnitureCabinetsDoorsCarver"/></entry>
-    			<entry><bean class="FurnitureCabinetsFeatureCarver"/></entry> стеллаж
-				<entry><bean class="PhoneInternalMemoryCarver"/></entry>
-                <entry><bean class="PhoneDiagonalCarver"/></entry>
-                <entry><bean class="PhoneFormFactorCarver"/></entry>
-                <entry><bean class="ColorCarver"/></entry>
-                <entry><bean class="PhoneFunctionsCarver"/></entry> телефон
+    			<entry><bean class="HomeToolsDrillCarver"/></entry> <!--штроборез-->
+				<entry><bean class="HomeToolsBatteryCarver"/></entry>
+    			<entry><bean class="HomeToolsSquareCarver"/></entry>
+    			<entry><bean class="HomeToolsPowerSupplyCarver"/></entry>
+    			<entry><bean class="HomeToolsPowerCarver"/></entry>
+    			<entry><bean class="HomeToolsDiscCarver"/></entry>
+    			<entry><bean class="HomeToolsGrinderCarver"/></entry>
+    			<entry><bean class="HomeToolsHammerCarver"/></entry>
+    			<entry><bean class="HomeToolsPneumaticCarver"/></entry>
+    			<entry><bean class="HomeToolsDrillCarver"/></entry> <!--шуруповерт-->
 			</list>
 		</constructor-arg>
 	</bean>
 </entry>
-<entry><bean class="PriceCarver"/></entry>
-<entry>
-	<bean class="dataCompositeCarver">
-		<constructor-arg>
-			<list>
-				<entry><bean class="dataSimpleCarver"><constructor-arg value="note1"/></bean></entry>
-				<entry><bean class="GeneratorPowerCarver"/></entry>
-    			<entry><bean class="GeneratorVoltageCarver"/></entry>
-    			<entry><bean class="GeneratorFeaturesCarver"/></entry>
-    			<entry><bean class="GeneratorStartTypeCarver"/></entry>
-    			<entry><bean class="GeneratorTypeCarver"/></entry> генератор
-				<entry><bean class="FurnitureCabinetsMaterialCarver"/></entry>
-    			<entry><bean class="FurnitureCabinetsDoorsCarver"/></entry>
-    			<entry><bean class="FurnitureCabinetsFeatureCarver"/></entry> шкаф
-				<entry><bean class="ConditionersTypeCarver"/></entry>
-    			<entry><bean class="ConditionerCompressorCarver"/></entry>
-    			<entry><bean class="ConditionersAreaCarver"/></entry> кондиционер
-				<entry><bean class="FurnitureCabinetsMaterialCarver"/></entry>
-    			<entry><bean class="FurnitureCabinetsDoorsCarver"/></entry>
-    			<entry><bean class="FurnitureCabinetsFeatureCarver"/></entry> полка
-				<entry><bean class="MatrixTypeCarver"/></entry>
-    			<entry><bean class="DisplayTypeCarver"/></entry>
-    			<entry><bean class="ResolutionCarver"/></entry>
-    			<entry><bean class="SmartTvCarver"/></entry> монитор
-				<entry><bean class="FurnitureStolyFormCarver"/></entry>
-    			<entry><bean class="FurnitureStolyMaterialCarver"/></entry>
-    			<entry><bean class="FurnitureStolyFeatureCarver"/></entry>
-    			<entry><bean class="FurnitureStolyTransformCarver"/></entry> стол
-				<entry><bean class="HomeToolsPowerSupplyCarver"/></entry>
-    			<entry><bean class="HomeToolsPowerCarver"/></entry>
-    			<entry><bean class="HomeToolsDiscCarver"/></entry>
-    			<entry><bean class="HomeToolsGrinderCarver"/></entry>
-    			<entry><bean class="HomeToolsHammerCarver"/></entry>
-    			<entry><bean class="HomeToolsPneumaticCarver"/></entry>
-    			<entry><bean class="HomeToolsDrillCarver"/></entry> болторез
-				<entry><bean class="HomeToolsPowerSupplyCarver"/></entry>
-    			<entry><bean class="HomeToolsPowerCarver"/></entry>
-    			<entry><bean class="HomeToolsDiscCarver"/></entry>
-    			<entry><bean class="HomeToolsGrinderCarver"/></entry>
-    			<entry><bean class="HomeToolsHammerCarver"/></entry>
-    			<entry><bean class="HomeToolsPneumaticCarver"/></entry>
-    			<entry><bean class="HomeToolsDrillCarver"/></entry> ножницы
-				<entry><bean class="HomeToolsPowerSupplyCarver"/></entry>
-    			<entry><bean class="HomeToolsPowerCarver"/></entry>
-    			<entry><bean class="HomeToolsDiscCarver"/></entry>
-    			<entry><bean class="HomeToolsGrinderCarver"/></entry>
-    			<entry><bean class="HomeToolsHammerCarver"/></entry>
-    			<entry><bean class="HomeToolsPneumaticCarver"/></entry>
-    			<entry><bean class="HomeToolsDrillCarver"/></entry> заклепочник
-				<entry><bean class="HomeToolsPowerSupplyCarver"/></entry>
-    			<entry><bean class="HomeToolsPowerCarver"/></entry>
-    			<entry><bean class="HomeToolsDiscCarver"/></entry>
-    			<entry><bean class="HomeToolsGrinderCarver"/></entry>
-    			<entry><bean class="HomeToolsHammerCarver"/></entry>
-    			<entry><bean class="HomeToolsPneumaticCarver"/></entry>
-    			<entry><bean class="HomeToolsDrillCarver"/></entry> степлер
-				<entry><bean class="HomeToolsPowerSupplyCarver"/></entry>
-    			<entry><bean class="HomeToolsPowerCarver"/></entry>
-    			<entry><bean class="HomeToolsDiscCarver"/></entry>
-    			<entry><bean class="HomeToolsGrinderCarver"/></entry>
-    			<entry><bean class="HomeToolsHammerCarver"/></entry>
-    			<entry><bean class="HomeToolsPneumaticCarver"/></entry>
-    			<entry><bean class="HomeToolsDrillCarver"/></entry> отвертка
-				<entry><bean class="FurnitureCabinetsMaterialCarver"/></entry>
-    			<entry><bean class="FurnitureCabinetsDoorsCarver"/></entry>
-    			<entry><bean class="FurnitureCabinetsFeatureCarver"/></entry> стеллаж
-				<entry><bean class="PhoneInternalMemoryCarver"/></entry>
-    			<entry><bean class="PhoneDiagonalCarver"/></entry>
-    			<entry><bean class="PhoneFormFactorCarver"/></entry>
-    			<entry><bean class="ColorCarver"/></entry>
-    			<entry><bean class="PhoneFunctionsCarver"/></entry> телефон
-			</list>
-		</constructor-arg>
-	</bean>
-</entry>
-<entry>
-    <bean class="DataSplittedUrisCarver">
-        <constructor-arg>
-            <list>
-                <entry value="image1"/>
-                <entry value="image2"/>
-                <entry value="image3"/>
-                <entry value="image4"/>
-                <entry value="image5"/>
-                <entry value="image6"/>
-                <entry value="image7"/>
-                <entry value="image8"/>
-                <entry value="image9"/>
-                <entry value="image10"/>
-                <entry value="image11"/>
-                <entry value="image12"/>
-                <entry value="image13"/>
-                <entry value="image14"/>
-                <entry value="image15"/>
-                <entry value="image16"/>
-                <entry value="image17"/>
-                <entry value="image18"/>
-                <entry value="image19"/>
-                <entry value="image20"/>
-            </list>
-        </constructor-arg>
-        <constructor-arg value="@[\s\,\;]+@"/>
-    </bean>
-</entry>
-<entry><bean class="dataSimpleCarver"><constructor-arg value="std.art"/></bean></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>
+<entry><bean class="dataNullCarver"/></entry>

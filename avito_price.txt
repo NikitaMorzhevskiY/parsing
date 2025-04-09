@@ -1,11 +1,11 @@
                                 <entry><bean class="dataSimpleCarver"><constructor-arg value="std.art"/></bean></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
                                 <entry>
                                     <bean class="dataCompositeCarver">
                                         <constructor-arg>
@@ -127,16 +127,13 @@
                                         <constructor-arg value="https://50.img.avito.st"/>
                                     </bean>												
                                 </entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
                                 <entry>
                                     <bean class="DataClassifyingRegexpCarver">
                                         <constructor-arg value="sell.onDemand"/>
@@ -147,7 +144,7 @@
                                         </constructor-arg>
                                     </bean>
                                 </entry>
-								<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
                                 <entry>
                                     <bean class="dataCompositeCarver">
                                         <constructor-arg>
@@ -158,15 +155,18 @@
                                         </constructor-arg>
                                     </bean>
                                 </entry>
-								<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
                                 <entry><bean class="dataSimpleCarver"><constructor-arg value="prim"/></bean></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
+                                <entry><bean class="dataSimpleCarver"><constructor-arg value="country"/></bean></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+<!-- LoadIndex -->			    <entry><bean class="dataSimpleCarver"><constructor-arg value="in"/></bean></entry>
                                 <entry>
                                     <bean class="dataCompositeCarver">
                                         <constructor-arg>
@@ -187,6 +187,7 @@
                                         </constructor-arg>
                                     </bean>
                                 </entry>
+				<entry><bean class="dataNullCarver"/></entry>
                                 <entry>
                                     <bean class="dataCompositeCarver">
                                         <constructor-arg>
@@ -222,23 +223,67 @@
                                         </constructor-arg>
                                     </bean>
                                 </entry>
-								<entry><bean class="dataNullCarver"/></entry>
+                                <entry>
+                                    <bean class="dataPregReplaceFormatCarver">
+                                       <constructor-arg>
+                                            <bean class="dataPregReplaceFormatCarver">
+                                                <constructor-arg>
+                                                    <bean class="dataSimpleCarver"><constructor-arg value="autoParts.partNumberSubstitutes"/></bean>
+                                                </constructor-arg>
+                                                <constructor-arg value="@[\/\;\+]@"/>
+                                                <constructor-arg value=","/>
+                                            </bean>
+                                        </constructor-arg>
+                                        <constructor-arg value="@[\s\.\-]@"/>
+                                        <constructor-arg value=""/>
+                                    </bean>
+                                </entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
                                 <entry><bean class="QuantityCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
 <!--RimBolts-->    			    <entry><bean class="dataSimpleCarver"><constructor-arg value="spcd"/></bean></entry>
 <!--RimBoltsDiameter-->         <entry><bean class="dataSimpleCarver"><constructor-arg value="lpcd"/></bean></entry>
-								<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
 <!--RimDIA-->    		        <entry><bean class="dataSimpleCarver"><constructor-arg value="wheel.diskHoleDiameter"/></bean></entry>
 <!--RimDiameter--> 			    <entry><bean class="dataSimpleCarver"><constructor-arg value="wheel.diameter"/></bean></entry>
 <!--RimOffset--> 			    <entry><bean class="dataSimpleCarver"><constructor-arg value="wheel.et"/></bean></entry>
 <!--RimType-->                  <entry><bean class="AutoDiscTypeCarver"/></entry>	
 <!--RimWidth-->     			<entry><bean class="dataSimpleCarver"><constructor-arg value="wheel.width"/></bean></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
-								<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+<!--RunFlat-->     		        <entry>
+                                    <bean class="DataClassifyingRegexpCarver">
+                                        <constructor-arg value="tire.runFlat"/>
+                                        <constructor-arg>
+                                            <list>
+                                                <entry key="1" value="@(?i)да|есть@"/>	
+                                            </list>
+                                        </constructor-arg>
+                                    </bean>
+                                </entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+<!--SpeedIndex-->     		    <entry><bean class="dataSimpleCarver"><constructor-arg value="is"/></bean></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+<!--TireAspectRatio-->     	    <entry><bean class="dataSimpleCarver"><constructor-arg value="tire.height"/></bean></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+<!--TireSectionWidth-->     	<entry><bean class="dataSimpleCarver"><constructor-arg value="tire.width"/></bean></entry>
+				<entry><bean class="dataNullCarver"/></entry>
+<!--TireType-->     			<entry><bean class="AutoTyreSeasonCarver"/></entry>	
+<!--TireYear-->     		    <entry>
+                                    <bean class="dataRegexpCarver">
+										<constructor-arg>
+											<list>
+												<entry value="tire.year"/>
+											</list>
+										</constructor-arg>
+										<constructor-arg value="@(?i)\d{4}@"/>
+									</bean>
+								</entry>
+				<entry><bean class="dataNullCarver"/></entry>
+				<entry><bean class="dataNullCarver"/></entry>

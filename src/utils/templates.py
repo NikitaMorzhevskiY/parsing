@@ -371,8 +371,10 @@ CARVERS_FOR_AUTO = {
         <constructor-arg value="@[\s\,\;]+@"/>
     </bean>
 </entry>"""
-    }
-}
+    },
+    "ЕдиницыИзмерения":{
+        "synonyms": re.compile(r"\b(единицы\sизмерения|ед.изм|измерения|единицы|цена\sуказана\sха)\b", re.IGNORECASE),
+        "xml": """<entry><bean class="dataSimpleCarver"><constructor-arg value="ei"/></bean></entry>"""}}
 
 CARVERS_FOR_UKV = { "Наименование": {
         "synonyms": re.compile(r"\b(наименовани[ея]\s*(товар[а|ов])?|Номенклатура\,\sУпаковка|название)\b", re.IGNORECASE),
@@ -514,7 +516,10 @@ CARVERS_FOR_UKV = { "Наименование": {
     },
     "Описание":{
         "synonyms": re.compile(r"\bописание|примечание\b", re.IGNORECASE),
-        "xml": """\t\t\t\t<entry><bean class="dataSimpleCarver"><constructor-arg value="note1"/></bean></entry>"""}}
+        "xml": """\t\t\t\t<entry><bean class="dataSimpleCarver"><constructor-arg value="note1"/></bean></entry>"""},
+    "ЕдиницыИзмерения":{
+        "synonyms": re.compile(r"\b(единицы\sизмерения|ед.изм|измерения|единицы|цена\sуказана\sха)\b", re.IGNORECASE),
+        "xml": """<entry><bean class="dataSimpleCarver"><constructor-arg value="ei"/></bean></entry>"""}}
 
 
 

@@ -1,43 +1,66 @@
-import pandas as pd
-from collections import defaultdict
-import utils.const as const
-from transliterate.decorators import transliterate_function
-import utils.func as func 
 import re
-from  utils.carvers import ALL_CARVERS 
-import os
-import chardet
+import csv 
 
-class ProcessorForOther:
+import pandas as pd
+
+import utils.templates as templates
+import utils.func as func 
+from  utils.carvers import ALL_CARVERS 
+
+
+class GeneralHandler:
     def __init__(self, file_path: str, header_row: int, synonyms: dict, output_file: str, app):
 
         self.file_path = file_path
         self.header_row = header_row
-        self.synonyms = const.CARVERS_FOR_UKV
+        self.synonyms = templates.CARVERS_FOR_UKV
         self.output_file = output_file
         self.app = app
         self.data = self._load_file()
         
-    
 
     def _load_file(self):
-        
-        if self.file_path.endswith(".csv"):
-            return pd.read_csv(self.file_path, header=self.header_row)
-        elif self.file_path.endswith(".xls") or self.file_path.endswith(".xlsx"):
-            return pd.read_excel(self.file_path, header=self.header_row)
-        else:
-            self.app.log_message(f"Неверный формат файла") 
+        try:
+            if self.file_path.endswith(".csv"):
+                with open(self.file_path, 'r', encoding='utf-8') as f:
+                    sample = f.read(2048)
+                    f.seek(0)
 
-    
+                    try:
+                        dialect = csv.Sniffer().sniff(sample)
+                        delimiter = dialect.delimiter
+                    except csv.Error:
+                        delimiter = ','
+
+                    self.app.log_message(f"Определён разделитель: '{delimiter}'")
+
+                # читаем CSV с определённым разделителем
+                return pd.read_csv(self.file_path, sep=delimiter, header=self.header_row, encoding='utf-8')
+
+            elif self.file_path.endswith(".xls") or self.file_path.endswith(".xlsx"):
+                return pd.read_excel(self.file_path, header=self.header_row)
+
+            else:
+                self.app.log_message("Неверный формат файла")
+
+        except Exception as e:
+            self.app.log_message(f"Ошибка при загрузке таблицы: {e}")
+            return None
+
+
     def process_table(self):
-
+        """Проходит по наименованиям колонки, исходя из них вставляет в 
+            словарь подходящий фрагмент xml как значение и ключ, который так же указан 
+            в templates. Если находит колонку наименование, то в func идет вставка подходящик 
+            карверов, вставляются и в описание и в наименование исходя из carvers. В результат описание
+            с карверами попадает только после нахождения этой колонки, временно хранится в pending_fata
+        """
         result = {}
         pending_data = {"Наименование": [], "Описание": []}  
         try:
             self.app.log_message("Обработка файла запущена...")
             for column_index, column in enumerate(self.data.columns):
-                xml_fragment = self._map_values_other(column)
+                xml_fragment = self._map_values(column)
 
                 if isinstance(xml_fragment, tuple):
 
@@ -97,14 +120,14 @@ class ProcessorForOther:
                    
 
             self._save_result(result)
-            # self.app.log_message(f"Файл обработан") 
+ 
         except Exception as e:
 
             self.app.log_message(f"Ошибка при обработке: {e}")     
 
     
-    def _map_values_other(self, column_name:str) -> str:
-        """Находит ключ по регулярному выражению и возвращает соответствующий XML."""
+    def _map_values(self, column_name:str) -> str:
+        """Находит совпадения для заданного названия колонки в файле templates"""
         try:
             for key, value in self.synonyms.items():
             
@@ -121,7 +144,7 @@ class ProcessorForOther:
     
 
     def _save_result(self, result: list):
-        """Сохраняет обработанный текст в файл."""
+        """Сохраняет результат в файл"""
         try:
             with open(self.output_file, "w", encoding="utf-8") as f:
 
@@ -140,11 +163,6 @@ class ProcessorForOther:
         except Exception as e:
             self.app.log_message(f'Ошибка при сохранении: {e}')            
                 
-
-    @transliterate_function(language_code='ru', reversed=True)
-    def translit(self, text: str) -> str:   
-        """Переводит кирилицу в латиницу"""           
-        return text
     
 
     def return_items_cilumn(self, column_name):

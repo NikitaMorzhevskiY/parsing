@@ -1,16 +1,15 @@
 import tkinter as tk
-from tkinter import filedialog, ttk
+from tkinter import filedialog
 import sys
 import os
-from tkinter import messagebox
 
 # Подключение модулей
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.append(parent_dir)
-from core.AutopartsProccessor import TableProcessor
-from core.GeneralProccessor import ProcessorForOther
-from core.AvitoProccessor import AvitoProc
-import utils.const as const
+from core.autoparts_handler import AutopartHandler
+from core.general_handler import GeneralHandler
+from core.avito_handler import AvitoHandler
+import utils.templates as templates
 
 
 class MyApp:
@@ -110,11 +109,11 @@ class MyApp:
 
         if self.file_path:
             if self.category.get() == "autoparts":
-                res = TableProcessor(self.file_path, number, const, 'output_auto.txt', self)
+                res = AutopartHandler(self.file_path, number, templates, 'output_auto.txt', self)
             elif self.category.get() == "general":
-                res = ProcessorForOther(self.file_path, number, const, 'output_goods.txt', self)
+                res = GeneralHandler(self.file_path, number, templates, 'output_goods.txt', self)
             else:
-                res = AvitoProc(self.file_path, number, sheet, const, "avito_price.txt", self)
+                res = AvitoHandler(self.file_path, number, sheet, templates, "avito_price.txt", self)
             res.process_table()
             self.log_message(f"Файл обработан")
         else:
@@ -127,10 +126,3 @@ class MyApp:
         self.log_text.config(state=tk.DISABLED)
         self.log_text.yview(tk.END)
 
-
-
-# Запуск приложения
-if __name__ == "__main__":
-    root = tk.Tk()
-    app = MyApp(root)
-    root.mainloop()
