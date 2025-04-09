@@ -18,9 +18,9 @@ class AvitoProc:
         """Определяет формат файла и загружает его."""
         try:
             if self.file_path.endswith(".csv"):
-                return pd.read_csv(self.file_path, header=self.header_row)
+                return pd.read_csv(self.file_path, header=self.header_row, nrows = 50)
             elif self.file_path.endswith(".xls") or self.file_path.endswith(".xlsx"):
-                return pd.read_excel(self.file_path, header=self.header_row, sheet_name=self.sheet)
+                return pd.read_excel(self.file_path, header=self.header_row, sheet_name=self.sheet, nrows = 50)
             else:
                 self.app.log_message(f"Неверный формат файла")      
         except Exception as e:        

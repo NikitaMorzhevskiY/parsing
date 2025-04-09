@@ -876,11 +876,11 @@ CARVERS_FOR_AVITO = {
 
     "Применимость": {"synonyms": re.compile(r"\bCompatibleCars\b", re.IGNORECASE),
                     "xml": 
-"""<entry><bean class="dataSimpleCarver"><constructor-arg value="prim"/></bean></entry>"""},     
+"""                                <entry><bean class="dataSimpleCarver"><constructor-arg value="prim"/></bean></entry>"""},     
 
     "Страна": {"synonyms": re.compile(r"\bcountry\b", re.IGNORECASE),
                     "xml": 
-"""<entry><bean class="dataSimpleCarver"><constructor-arg value="country"/></bean></entry>"""}
+"""                                <entry><bean class="dataSimpleCarver"><constructor-arg value="country"/></bean></entry>"""}
 
 
 

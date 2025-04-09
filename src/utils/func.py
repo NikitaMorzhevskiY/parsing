@@ -1,30 +1,29 @@
-import utils.carvers as carvers
+import utils.carvers as carvers   
+import re
+from collections import defaultdict
 
-def split_carver_name_descr(column: list) -> dict:
+
+def split_carver_name_descr(column: list, carvers_dict: dict) -> dict:
     """
-    Принимает список значений из колонки таблицы и возвращает словарь с карверами 
-    для наименования и описания, проходя по всем словарям в файле const.
+    Принимает список значений из колонки таблицы и словарь с карверами.
+    Возвращает словарь с секциями 'Наименование' и 'Описание' и соответствующими XML.
     """
-    result = {
-        'Наименование': [],
-        'Описание': []
-    }
-    
-    # Проходим по всем атрибутам модуля const
-    for attr_name in dir(carvers):
-        if attr_name.isupper():  #нужные словари именуются заглавными буквами
-            furniture_templates = getattr(carvers, attr_name)
-            print(furniture_templates)
-            if isinstance(furniture_templates, dict):  # Проверяем словарь ли это
-                for item in column:
-                    item_lower = str(item).lower()
-                    
-                    for keys, data in furniture_templates.items():
-                        
-                        if any(word in item_lower for word in (keys if isinstance(keys, (list, tuple)) else [keys])):   #??? (keys if isinstance(keys, (list, tuple)) else [keys])
-                            for section, template in data.items():
-                               # print(data)
-                                if template not in result[section]:
-                                    result[section].append(template)
-    
-    return result
+    result = defaultdict(list)
+
+    for item in column:
+        item_lower = str(item).lower()
+        words = re.findall(r'\b[\w-]+\b', item_lower)
+
+        for keywords, carver_sections in carvers_dict.items():
+            for word in words:
+                if word in keywords:
+                    for section, xml in carver_sections.items():
+                        entry = f"{xml} {word}"
+                        if entry not in result[section]:
+                            result[section].append(entry)
+                    break  # больше не ищем в этом carvers_dict
+            else:
+                continue
+            break
+
+    return dict(result)

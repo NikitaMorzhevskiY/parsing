@@ -4,6 +4,9 @@ import utils.const as const
 from transliterate.decorators import transliterate_function
 import utils.func as func 
 import re
+from  utils.carvers import ALL_CARVERS 
+import os
+import chardet
 
 class ProcessorForOther:
     def __init__(self, file_path: str, header_row: int, synonyms: dict, output_file: str, app):
@@ -16,6 +19,7 @@ class ProcessorForOther:
         self.data = self._load_file()
         
     
+
     def _load_file(self):
         
         if self.file_path.endswith(".csv"):
@@ -24,6 +28,7 @@ class ProcessorForOther:
             return pd.read_excel(self.file_path, header=self.header_row)
         else:
             self.app.log_message(f"Неверный формат файла") 
+
     
     def process_table(self):
 
@@ -49,7 +54,7 @@ class ProcessorForOther:
                     
                     if key == 'Наименование':
 
-                        additional_data = func.split_carver_name_descr(self.return_items_cilumn(column))
+                        additional_data = func.split_carver_name_descr(self.return_items_cilumn(column), ALL_CARVERS)
                         
                         
                         for add_key, add_values in additional_data.items():
